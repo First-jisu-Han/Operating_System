@@ -6,8 +6,6 @@ package synchronization;
         Consumer는 자원을 소비하는 관계를 이룬다.
         여기서 발생하는 문제가 동기화 문제이다 ( 데이터의 일치성을 유지시켜야함-공유 프로세스들이 서로 다른 공유 데이터값을 사용하게되는 걸 방지)
  */
-
-
 import java.util.Scanner;
 
 public class ProducerConsumerProblem {
@@ -54,8 +52,8 @@ public class ProducerConsumerProblem {
     }
             }
 
-    /* 결론 : 동기화문제: 이 공유 데이터를 동시접근시 ( 프로세스가 동시에 공유 데이터에 같이 접근) buffer개수가 다를수도 있고, 데이터
-        순서도 다를 수 있음
+    /* 결론 : 동기화문제: 이 공유 데이터를 동시접근시 ( 프로세스가 동시에 공유 데이터에 같이 접근) buffer 개수가 달라질 수도 있고, 이용하는 데이터
+        순서와 내용도 달라질 수 있음
      */
 
 
