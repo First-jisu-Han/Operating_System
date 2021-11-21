@@ -38,18 +38,22 @@ public class ProducerConsumerProblem {
         }}
 
     static class Consumer {
-            public static void consume(){
+        public static void consume() {
+            while (true) {
                 // 저장공간에 쓸 데이터가 아무것도 없다면 정지
-                while(counter==0)
-                {
+                while (counter == 0) {
                     /* do nothing */
                 }
-                String next_consumed=buffer[out]; // 저장공간에서 가져다 쓸 데이터가 1번째라면 next_consumed 에다가 buffer의 1번째 데이터 저장
-                out=(out+1)%BUFFER_SIZE;  // 다음 쓸 데이터 out 은  하나 올린 ,index 2
+                String next_consumed = buffer[out]; // 저장공간에서 가져다 쓸 데이터가 1번째라면 next_consumed 에다가 buffer의 1번째 데이터 저장
+                out = (out + 1) % BUFFER_SIZE;  // 다음 쓸 데이터 out 은  하나 올린 ,index 2
                 counter--; // 데이터를 사용하였기 때문에  현재 데이터 수를 1개 감소
             }
 
+        }
     }
+
+
+
             }
 
     /* 결론 : 동기화문제: 이 공유 데이터를 동시접근시 ( 프로세스가 동시에 공유 데이터에 같이 접근) buffer 개수가 달라질 수도 있고, 이용하는 데이터
