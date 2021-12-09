@@ -1,7 +1,5 @@
 package synchronization;
-
-/*
-        process 끼리는 데이터 영역을 공유할 수 있다.
+/*      process 끼리는 데이터 영역을 공유할 수 있다.
         특히 producer-consumer process 에서 Producer는 자원을 생성하고,
         Consumer는 자원을 소비하는 관계를 이룬다.
         여기서 발생하는 문제가 동기화 문제이다 ( 데이터의 일치성을 유지시켜야함-공유 프로세스들이 서로 다른 공유 데이터값을 사용하게되는 걸 방지)
@@ -12,6 +10,7 @@ public class ProducerConsumerProblem {
     public static void main(String[] args) {
 
     }
+
 
     final static int BUFFER_SIZE = 10; // 저장공간의 크기
     static int counter = 7; // 저장공간의 안의 공유 데이터
